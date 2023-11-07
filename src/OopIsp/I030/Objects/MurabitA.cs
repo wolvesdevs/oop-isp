@@ -1,18 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace I020.Objects
+namespace I030.Objects
 {
-    public sealed class Z02 : IPrint, IFax
+    public sealed class MurabitoA : CharaBase
     {
-        public void Fax()
-        {
-        }
-
-        public void Print()
+        public MurabitoA() : base(150, 50, Color.Brown)
         {
         }
     }
