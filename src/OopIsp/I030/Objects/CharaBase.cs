@@ -22,9 +22,9 @@ namespace I030.Objects
 
         public Color Color { get; set; }
 
-        public void Right()
-        {
-            X += 10;
-        }
+        //public void Right()
+        //{
+        //    X += 10;
+        //}
     }
 }

@@ -13,22 +13,22 @@ namespace I030
 {
     public partial class Form1 : Form
     {
-        private CharaBase _selectedChara;
+        //private CharaBase _selectedChara;
+        private IPlayer _player;
         List<CharaBase> _charas = new List<CharaBase>();
 
-        private CharaBase _yusya = new Yusya();
-        private CharaBase _senshi = new Senshi();
+        private IPlayer _yusya = new Yusya();
+        private IPlayer _senshi = new Senshi();
         private CharaBase _murabitoA = new MurabitoA();
 
         public Form1()
         {
-            _selectedChara = _yusya;
-
+            _player = _yusya;
             InitializeComponent();
             StartPosition = FormStartPosition.CenterScreen;
 
-            _charas.Add(_yusya);
-            _charas.Add(_senshi);
+            _charas.Add(_yusya as CharaBase);
+            _charas.Add(_senshi as CharaBase);
             _charas.Add(_murabitoA);
         }
 
@@ -43,13 +43,13 @@ namespace I030
 
         private void RightButton_Click(object sender, EventArgs e)
         {
-            _selectedChara.Right();
+            _player.Right();
             panel1.Refresh();
         }
 
         private void SenshiButton_Click(object sender, EventArgs e)
         {
-            _selectedChara = _senshi;
+            _player = _senshi;
         }
     }
 }

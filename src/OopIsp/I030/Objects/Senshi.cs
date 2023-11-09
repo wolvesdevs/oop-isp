@@ -7,10 +7,15 @@ using System.Threading.Tasks;
 
 namespace I030.Objects
 {
-    public sealed class Senshi : CharaBase
+    public sealed class Senshi : CharaBase, IPlayer
     {
         public Senshi() : base(10, 50, Color.Red)
         {
+        }
+
+        public void Right()
+        {
+            X += 20;
         }
     }
 }

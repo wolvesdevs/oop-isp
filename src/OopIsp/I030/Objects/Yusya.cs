@@ -7,10 +7,15 @@ using System.Threading.Tasks;
 
 namespace I030.Objects
 {
-    public sealed class Yusya : CharaBase
+    public sealed class Yusya : CharaBase, IPlayer
     {
         public Yusya() : base(10, 10, Color.Blue)
         {
+        }
+
+        public void Right()
+        {
+            X += 10;
         }
     }
 }

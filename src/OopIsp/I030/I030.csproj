@@ -53,6 +53,7 @@
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="Objects\CharaBase.cs" />
+    <Compile Include="Objects\IPlayer.cs" />
     <Compile Include="Objects\MurabitA.cs" />
     <Compile Include="Objects\Senshi.cs" />
     <Compile Include="Objects\Yusya.cs" />
