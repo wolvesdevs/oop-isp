@@ -4,6 +4,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace I030.Objects
 {
@@ -20,5 +21,10 @@ namespace I030.Objects
         public int Y { get; set; }
 
         public Color Color { get; set; }
+
+        public void Right()
+        {
+            X += 10;
+        }
     }
 }

@@ -13,16 +13,23 @@ namespace I030
 {
     public partial class Form1 : Form
     {
+        private CharaBase _selectedChara;
         List<CharaBase> _charas = new List<CharaBase>();
+
+        private CharaBase _yusya = new Yusya();
+        private CharaBase _senshi = new Senshi();
+        private CharaBase _murabitoA = new MurabitoA();
 
         public Form1()
         {
-            InitializeComponent();
-            this.StartPosition = FormStartPosition.CenterScreen;
+            _selectedChara = _yusya;
 
-            _charas.Add(new Yusya());
-            _charas.Add(new Senshi());
-            _charas.Add(new MurabitoA());
+            InitializeComponent();
+            StartPosition = FormStartPosition.CenterScreen;
+
+            _charas.Add(_yusya);
+            _charas.Add(_senshi);
+            _charas.Add(_murabitoA);
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -32,6 +39,17 @@ namespace I030
             {
                 e.Graphics.FillRectangle(new SolidBrush(chara.Color), chara.X, chara.Y, 30, 30);
             }
+        }
+
+        private void RightButton_Click(object sender, EventArgs e)
+        {
+            _selectedChara.Right();
+            panel1.Refresh();
+        }
+
+        private void SenshiButton_Click(object sender, EventArgs e)
+        {
+            _selectedChara = _senshi;
         }
     }
 }
